@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				String toText = "";
 				List<LocationRecord> le = tracker.getList();
-				HttpSync http = new HttpSync(le);
+				HttpSync http = new HttpSync();
 				http.sendToServer();
 				Iterator<LocationRecord> it = le.iterator();
 				while(it.hasNext())
